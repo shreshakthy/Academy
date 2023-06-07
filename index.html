@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+    
+</head>
+<style>
+    .cards {
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        box-shadow: 0px 0px 25px #D5DFE666;
+        border-radius: 20px;
+        height: auto;
+        width: auto;
+    }
+
+    #content {
+
+        bottom: 72px;
+        left: 72px;
+        width: 300px;
+        height: 100px;
+    }
+
+    #blurredbackground {
+        background: #4aec98 0% 0% no-repeat padding-box;
+        bottom: 72px;
+        left: 72px;
+        width: 300px;
+        height: 300px;
+        /* -webkit-filter: blur(10px); */
+        filter: blur(10px);
+        z-index: -1;
+    }
+
+    .x1 {
+        margin-top: 150px;
+    }
+    @media screen and (max-width: px){
+        .main{
+            font-size: 20px;
+        }
+    }
+
+    .home{
+        color: blueviolet;
+    }
+    
+</style>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
+
+    <nav class="navbar navbar-expand-sm navbar-dark p-2 fixed-top bg-light  ">
+        <div class="container-fluid ">
+            <a class="navbar-brand text-black fw-bolder p-3" href="javascript:void(0)">
+                <h3 class="text-dark" ><b>.ACADEMY</b></h3>
+            </a>
+            <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar"
+                style="background-color: blue;">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="navbar-nav me-auto ">
+                </ul>
+                <div class="d-flex ">
+                    <span class="text-black">
+                        <ul class="navbar-nav me-auto">
+                            <li class="nav-item">
+                                <a class="  nav-link text-dark fw-bold "  href="javascript:void(0)"> <span
+                                        class="home">HOME</span></a>
+                            </li>
+                            <li class="nav-item mx-4">
+                                <a class="nav-link text-black   "  aria-current="page"    href="./UI.html"><b> UI/UX DESIGN</b></a>
+                            </li>
+                            <li class="nav-item mx-4">
+                                <a class="nav-link text-black" href="./fullstack.html"><b>Full-Stack Web development</b></a>
+                            </li>
+                            <li class="nav-item mx-4">
+                                <a class="nav-link text-black" href="javascript:void(0)"><b>Contact Us</b></a>
+                            </li>
+                            <button class="btn btn-dark" style="height:45px ;" type="button" data-bs-toggle="modal"
+                            data-bs-target="#myModal">Request
+                            Callback
+                        </button>
+                        </ul>
+                    </span>
+
+
+
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="modal" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title" style="color: #8842db;">Talk to Learning Advisor</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="col-lg-12 col-12  shadow-sm mb-5 bg-body rounded h-50 w-lg-25  ">
+
+
+                        <div class="mx-2 p-3 d-md-flex justify-content-between gap-4">
+                            <div>
+                                <label class="text-dark px-2 ">First Name</label><br>
+                                <input type="text" class="rounded-2  input  mx-2  "
+                                    style="width: 100%; height:35px ; border: 2px solid #d5dfe6 ; font-family: 'Lato';"
+                                    id="email address" name="email address" placeholder="Enter your first name ">
+
+                            </div>
+
+                            <div>
+                                <label class=" text-dark px-2 "> Last Name</label><br>
+                                <input type="text" class="rounded-2  input  mx-2  "
+                                    style="width: 100%; height:35px ; border: 2px solid #d5dfe6 ;" id="email address"
+                                    name="email address" placeholder="Enter your last name ">
+                            </div>
+
+                        </div>
+                        <div class="mx-2 p-3">
+                            <label class=" text-dark  px-2 "> Email Address</label><br>
+                            <input type="text" class="rounded-2  input  mx-2  "
+                                style="width: 100%; height:35px ; border: 2px solid #d5dfe6 ;" id="email address"
+                                name="email address" placeholder="Enter your email address ">
+                        </div>
+
+                        <div class="mx-2 p-3">
+                            <label class=" text-dark  px-2 "> Phone Number</label><br>
+                            <input type="number" class="rounded-2  input  mx-2  "
+                                style="width: 100%; height:35px ; border: 2px solid #d5dfe6 ; " id="email address"
+                                name="email address" placeholder="Enter your Phone Number ">
+                        </div>
+
+                        <div class="mx-2 p-3">
+                            <label class=" text-dark  px-2 "> Select Your Course</label><br>
+
+                            <select name="cars" id="cars" style="width:100%; height:35px ; border: 2px solid #d5dfe6 ;"
+                                class="rounded-2  input  mx-2 ">
+
+                                <option value="" disabled selected hidden class="text-secondary">Select
+                                </option>
+                                <option value="volvo">UI/UX Design</option>
+                                <option value="saab">Full Stack Development</option>
+                                <option value="opel">React Development</option>
+
+                            </select>
+
+                        </div>
+
+                        <div class=" p-3">
+                            <button class="btn justify-content-end text-white mx-2 "
+                                style="height:38px ; width: 100%; background-color: #8842db;" type="button">Get Request
+                                Callback</button>
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row mt-5">
+        <div class="col-6 p-5 d-flex justify-content-center ">
+            <div class="x1">
+                <p>
+                <h3 class="main"> <span 
+                    style=" background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 10px); opacity: 2; filter: blur(58px);position: absolute;top: 30%; height: 14%; width: 5%;">h</span>
+                 Learn From <span class="" style="font-size:150%;color: #6ce0fa;">Nothing,</span> </h3>
+                <h3> <span class="p-2" style="margin-top: 0px;  "> To Be</span> <span
+                    style="font-size:130%;color: #ff7f4d;"   class="">Something</span> </h3>
+                <h6> <span class="p-2 " style="color:#b1c3d0;">Enthusiasm driven educators who have reasonable instruction</span></h6>
+                </p>
+                <div >
+                    <button class=" mx-5 px-5 pb-3 text-center text-white py-1 "
+                        style="border-radius: 5px; height: 35px; border: none; background-color: #1fdb9d;"><span class="text-center"> Join Now</span></button>
+                </div>
+                <div class=" mx-5 px-5 pb-5 py-2 d-md-flex pos" style="top: 29%;">
+                    <img src="/images/Group 9.PNG " width="45%" height="20%" />
+                    <p class="d-lg-flex "  style="color: rgb(175, 135, 212);">
+                        JoinCourse Now,<br>
+                        Pay After Placement
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 d-none d-md-block py-5 ">
+            <img src="/images/Group 3.PNG" width="80%" height="80%" />
+
+        </div>
+        <div class="text-center">
+            <h2> Develop The <span style="color: #63e7bc;">Skills</span> To Move <span style="color: blueviolet;">fast</span>
+                And
+                Stay In <span style="color: blueviolet;"> advance</span></h2>
+        </div>
+        <div class="container">
+            <div class="row  d-flex justify-content-center gap-4">
+                <div class="cards col-lg-3  py-3 my-lg-2">
+                    <div style="border-left: 3px solid orange; height: 2rem; font-size: small;" class="fw-bold">
+                        Outcome-driven getting know
+                    </div>
+                    <div class="m-2" style="color: #8D9BA6; font-size: small;">
+                        Archive ability-based outcome from our <br>
+                        today's immersive gaining knowledge<br>
+                        of enjoy platform
+                    </div>
+                </div>
+                <div class="cards col-lg-3  py-2 my-lg-2">
+                    <div style="border-left: 3px solid orange; height: 2rem ; font-size: small;" class="fw-bold">
+                        Advanced insites
+                    </div>
+                    <div class="m-2 fs-6" style="color: #8D9BA6; ">
+                        <span style="font-size: small;">Get a quantified view of your team's <br>
+                            capabilities and placed the proper human<br>
+                            beings at the right jobs</span>
+                    </div>
+                </div>
+                <div style="font-size: small;" class="cards col-lg-3  py-2 my-lg-2">
+                    <div style="border-left: 3px solid orange; height: 2rem; font-size: small;" class="fw-bold">
+                        Blended Learning
+                    </div>
+                    <div class="m-2 fs-6" style="color: #8D9BA6; ">
+                        <span style="font-size: small;">Get exceptional of each world with live <br>
+                            instructor-led education and the flexibility<br>
+                            of e-learning</span>
+                    </div>
+                </div>
+                <div class=" row  d-flex justify-content-center gap-4">
+                    <div class="cards col-lg-3  py-3 my-lg-2">
+                        <div style="border-left: 3px solid orange; height: 2rem;font-size: small;" class="fw-bold">
+                            "Work-like" Experiences
+                        </div>
+                        <div style="color: #8D9BA6;" class="m-2 fs-6 ">
+                            <span style="font-size: small;">Contextual mastering crafted around <br>
+                                actual-international trouble solving in<br>
+                                tech organizations</span>
+                        </div>
+                    </div>
+                    <div class="cards col-lg-3  py-3 my-lg-2  ">
+                        <div style="border-left: 3px solid orange; height: 2rem; font-size: small;" class="fw-bold">
+                            Training through Practitioners
+                        </div>
+                        <div style="color: #8D9BA6" class="m-2 fs-6">
+                            <span style="font-size: small;">Learn from the real-international experience <br>
+                                of worldwide fame and authorized industry<br>
+                                experts</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class=" p-5 container">
+
+            <h2>Get <span class="text-black fw-bold">Certified</span> with <span class=" text-black fw-bold">Our
+                    Courses</span> <br></h2>
+            <span style="color: #8D9BA6"> Accomplish your vocation objectives with industry perceived learning
+                ways,</span>
+        </div>
+
+
+
+
+
+        <div class="row row-cols-1 row-cols-md-4 g-2 p-5 d-md-flex justify-content-center">
+            <div class="col ">
+                <div class="card mx-auto" style="width:296px; border: none;">
+                    <img src="/images/pexels-tranmautritam-326502.PNG" class="card-img-top" alt="card image"
+                        style="width:100%" />
+                    <div class="card-body">
+                        <h4 class="card-title fw-bold" style="font-size:medium;">UI/UX Design</h4>
+                        <p class="card-text" style="color: #8D9BA6 ">
+                            <span style="font-size: small;"> Lorem ipsum dolor sit amet, <br>
+                                consetetur sadipscing elitr, sed diam <br>
+                                nonumy eirmod tempor invidunt ut<br>
+                                labore et dolore magna aliquyam erat, sed diam voluptua. </span>
+                        </p>
+                    </div>
+                    <a href="#" class="btn btn-dark " style="width: 285px;">Join Now</a>
+                </div>
+            </div>
+            <div class="col ">
+                <div class="card mx-auto" style="width:296px; border: none;">
+                    <img src="/images/pexels-pixabay-38519.PNG" class="card-img-top" alt="card image"
+                        style="width:100%" />
+                    <div class="card-body">
+                        <h4 class="card-title fw-bold" style="font-size:medium;">Web Development</h4>
+                        <p class="card-text" style="color: #8D9BA6 ">
+                            <span style="font-size: small;"> Lorem ipsum dolor sit amet, <br>
+                                consetetur sadipscing elitr, sed diam <br>
+                                nonumy eirmod tempor invidunt ut<br>
+                                labore et dolore magna aliquyam erat, sed diam voluptua. </span>
+                        </p>
+                    </div>
+                    <a href="#" class="btn btn-dark " style="width: 285px;">Join Now</a>
+                </div>
+            </div>
+            <div class="col ">
+                <div class="card mx-auto" style="width:296px; border: none;">
+                    <img src="/images/pexels-pixabay-270348.PNG" class="card-img-top" alt="card image"
+                        style="width:100%" />
+                    <div class="card-body">
+                        <h4 class="card-title fw-bold" style="font-size:medium;">React Native App Development</h4>
+                        <p class="card-text" style="color: #8D9BA6 ">
+                            <span style="font-size: small;"> Lorem ipsum dolor sit amet, <br>
+                                consetetur sadipscing elitr, sed diam <br>
+                                nonumy eirmod tempor invidunt ut<br>
+                                labore et dolore magna aliquyam erat, sed diam voluptua. </span>
+                        </p>
+                    </div>
+                    <a href="#" class="btn btn-dark text-danger" style="width: 280px;">Coming Soon</a>
+                </div>
+            </div>
+            <div class="col ">
+                <div class="card mx-auto" style="width:296px; border: none;">
+                    <img src="/images/flutter.JPG" class="card-img-top" alt="card image" style="width:100%" />
+                    <div class="card-body">
+                        <h4 class="card-title fw-bold" style="font-size:medium;">Flutter App Development</h4>
+                        <p class="card-text" style="color: #8D9BA6 ">
+                            <span style="font-size: small;">Lorem ipsum dolor sit amet, <br>
+                                consetetur sadipscing elitr, sed diam <br>
+                                nonumy eirmod tempor invidunt ut<br>
+                                labore et dolore magna alised  
+                                diam voluptua</span>
+                        </p>
+                    </div>
+                    <a href="#" class="btn btn-dark text-danger" style="width: 285px;">Coming Soon</a>
+                </div>
+            </div>
+        </div>
+
+      
+
+        <div class=" container bg-black d-md-flex px-1 ">
+            <div class="rounded float-start  d-none d-md-block" style="width: 50%;">
+                <img src="/images/pexels-mikhail-nilov-7582775.PNG" />
+            </div>
+            <div class=" align-content-sm-center text-white p-5 ">
+                <h3>
+                    <span style="color:rgb(232, 90, 38)">Connect with Learning Advisor</span>
+
+                </h3>
+                <span style="font-size: small; ">Learn coding from experts in a live environment.</span>
+
+
+                <!-- <div class=" d-md-flex justify-content-between bg-black  gap-5"> -->
+                <div class="d-lg-flex justify-content-start ">
+                    <div class="px-2 my-2 py-2">
+                        <div class="py-2">
+                            <label class="text-white"> First Name</label><br>
+                            <input type="text" class="rounded-2 w-100  my-2 px-5 bg-black " style="border-color: #d5dfe6; height: 45px;" id="email address"
+                                name="eirstname"  placeholder="Enter first name"><br>
+                        </div>
+                        
+
+                         <div class="py-2">
+                            <label class=" text-white">Email Address</label><br>
+                            <input type="text" class="rounded-2 w-100  my-2 px-5 bg-black " style="border-color: #d5dfe6; height: 45px;" id="email address"
+                                name="Email Address " placeholder="Enter email address"><br>
+    
+                         </div>
+
+                        
+                    </div>
+                    <div class=" px-5 my-2 py-2">
+                        <div class="py-2">
+                            <label class=" text-white"> Last Name </label><br>
+                        <input type="text" class="rounded-2 w-100  my-2 px-5 bg-black " style="border-color: #d5dfe6; height: 45px;" id="email address"
+                            name="lastname "  placeholder="Enter your last name"><br>
+                        </div>
+                       
+                        <div class="py-2">
+                        <label class=" text-white"> Phone Number</label><br>
+                        <input type="text" class="rounded-2 w-100  my-2 px-5 bg-black " style="border-color: #d5dfe6; height: 45px;" id="email address"
+                            name="phno"  placeholder="Enter the phone number"><br>
+                        </div>
+                    </div>
+                </div>
+
+
+               <div class=" ">
+                <label class=" text-white  px-2 "> Select Your Course</label><br>
+
+                <select name="cars" id="cars" style="width:93%; height:45px ; border: 2px solid #d5dfe6 ;"
+                    class="rounded-2 bg-black  text-white input  mx-2 ">
+
+                    <option value="" disabled selected hidden class="text-white">Select</option>
+                    <option value="volvo">UI/UX Design</option>
+                    <option value="saab">Full Stack Development</option>
+                    <option value="opel">React Development</option>
+
+                </select>
+
+            </div>
+
+                <div class=" form-group shadow-textarea text-white px-2 my-2 py-2 w-100 ">
+                    <label for="exampleFormControlTextarea6 ">Message</label>
+                    <textarea class="form-control z-depth-1 bg-black"  id="exampleFormControlTextarea6" rows="3"
+                        placeholder="Write something here..."></textarea>
+
+
+                        <div>
+                            <button class=" h-50 rounded-2 my-4  px-2 py-2 text-center text-white" style="border: 1.5px solid var(--unnamed-color-d5dfe6);
+                            background: #ff7f4d 0% 0% no-repeat padding-box;
+                            border: 2px solid #D5DFE6;
+                            width: 100%;
+                                border-radius: 10px;
+                                  opacity: 1; "> Submit</button>
+                        </div>
+                </div>
+
+
+
+
+
+
+                
+            </div>
+
+        </div>
+
+
+
+
+    </div>
+
+    <!-- <img src="./images/Group 255.png" width="100%" height="80%"> -->
+    <div style="position: relative;">
+        <div class="container-fluid  d-lg-flex px-1">
+            <img src="/images/Group 255.PNG" width="100%" height="80%">
+            <div class="text-primary top-left" style="position: absolute;
+                top:30%;
+                left: 20%;">
+                <h4 class="text-dark">We Help Student To Grow<br> Their Carrier</h4>
+            </div>
+            <div class="top-left py-3" style="position: absolute;
+                top: 41%;
+                left: 20%;">
+                <button class=" text-white pos" type="button"
+                    style="border-radius:5px; height: 30px;  background-color: #1fdb9d; width: 200%; border: none;">JOIN NOW</button>
+            </div>
+            <div class="top-left pos" style="position: absolute;
+                top: 51%;
+                left: 30%;">
+                <img src="/images/Group 9.PNG" width="80%" height="40%">
+            </div>
+            <div class="text-primary top-left pos" style="position: absolute;
+                top: 55%;
+                left: 38%;">
+                <h6 class="text-secondary d-md-block d-none">join course now,with zero payment</h6>
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+
+    <div class="top-left" style="position: absolute;
+            top: 430%;
+            left: 25%;"></div>
+
+
+    </div>
+
+
+   
+    <div class="container-fluid">
+        <footer>
+            <section class="d-flex justify-content-center justify-content-lg-between text-center text-lg-start">
+
+            </section>
+            <div class="container-fluid" style="background-color: azure;">
+                <div class="row container">
+                    <div class="col-xl-3 col-lg-4 col-md-6 ">
+                        <div class="p-3 px-4">
+                            <h3 class="text-dark"><b>.ACADEMY</b></h3>
+                            <p class="mb-30 text-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad
+                                solufaciliseos quia optio iusto odit atque eum tempore, quisquam officiis vero veniam
+                                hic,
+                            </p>
+                            <img src="/images/facebook-box-fill.PNG" />
+                            <img src="/images/instagram-fill.PNG" />
+                            <img src="/images/linkedin-box-fill.PNG" />
+                            <img src="/images/twitter-fill.PNG" />
+                        </div>
+                    </div>
+                    <div class="col-xl-2 offset-xl-1 col-lg-2 col-md-6 py-2">
+                        <div class="p-3">
+                            <h6><b>Company</b></h6>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <div class="text-decoration-none ">About Us</div>
+                                </li>
+                                <li>
+                                    <div class="text-decoration-none ">Careers</div>
+                                </li>
+                                <li>
+                                    <div class="text-decoration-none ">Accreditation</div>
+                                </li>
+                                <li>
+                                    <div class="text-decoration-none">Contact Us</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-6 py-2">
+                        <div class="p-3">
+                            <h6><b>Courses</b></h6>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <div class="text-decoration-none">UI/UX Design</div>
+                                </li>
+                                <li>
+                                    <div class="text-decoration-none">Full-Stack Web Development</div>
+                                </li>
+                                <li>
+                                    <div class="text-decoration-none">Mobile Application Development</div>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-6 py-2">
+                        <div class="p-3">
+                            <h6><b>Contact Us</b></h6>
+                            <div>
+                                <img src="/images/phone-fill.PNG" style="width: 15px;" />
+                                <label class="form-label">+91 78923 27428</label><br>
+                                <img src="/images/mail-fillPNG" style="width: 15px;" />
+                                <label for="Newsletter" class="form-label">sales@firstfloor.agency</label>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+                <div class="container">
+                    <div class="d-flex justify-content-center justify-content-lg-between "
+                        style="border-top: 2px solid #2aebab;">
+                        <div class="copyright">
+                            <b>© 2018-21 First Floor Academy. All Rights Reserved</b>
+                        </div>
+
+                        <div class="copyright d-flex justify-content-between col-3 ">
+                            <b>Privacy Policy</b>
+                            <b>Terms And Services</b>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    </footer>
+    </body>
+    </html>
